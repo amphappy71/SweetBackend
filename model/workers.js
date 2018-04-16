@@ -5,8 +5,8 @@ const WorkersSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    city: {
-        type: String,
+    zip: {
+        type: Number,
         required: true
     },
     firstName: {
