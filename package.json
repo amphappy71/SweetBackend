@@ -1,0 +1,19 @@
+{
+  "name": "sweetbackend",
+  "version": "1.0.0",
+  "description": "Sweet T's Backend Server",
+  "main": "sweetbackend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amphappy71/SweetBackend.git"
+  },
+  "author": "Todd Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amphappy71/SweetBackend/issues"
+  },
+  "homepage": "https://github.com/amphappy71/SweetBackend#readme"
+}
