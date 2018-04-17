@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
-const WorkersSchema = mongoose.Schema({
+const WorkerSchema = mongoose.Schema({
     email: {
         type: String,
         required: true
     },
     zip: {
-        type: Number,
+        type: String,
         required: true
     },
     firstName: {
@@ -19,4 +19,4 @@ const WorkersSchema = mongoose.Schema({
     }
 });
 
-const P_worker = module.exports = mongoose.model('P_worker', WorkersSchema);
+const Worker = module.exports = mongoose.model('Worker', WorkerSchema);

@@ -1,18 +1,40 @@
 var express = require('express');
 var router = express.Router();
 
-const P_worker = require('../model/workers');
+const Worker = require('../model/workers');
 
 //get from database
 
-router.get('/get_route', (req, res, next)=>{
-    
+router.get('/workers', (req, res, next)=>{
+    Worker.find(function(err,workers){
+        if(err){
+            res.json(err);  //res method provided by express (adds header, +)
+        }
+        else{
+            console.log("get works");
+            res.json(workers); //return all the workers
+        }
+    });
+
 });
 
 //insert new data to MongoDB
 
-router.post('/post_route',(req, res, next)=>{
-
+router.post('/worker', (req, res, next)=>{
+    let newWorker = new Worker({
+        email:req.body.email,
+        zip:req.body.zip,
+        firstName:req.body.firstName,
+        lastName:req.body.lastName
+    });
+    newWorker.save((err, worker)=>{
+        if(err){
+            req.json(err);
+        }
+        else{
+            res.json({msg: 'Worker has been added'});
+        }
+    });
 });
 
 //update MongoDB data

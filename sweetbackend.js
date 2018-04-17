@@ -19,7 +19,7 @@ app.use('/api', route);
 
 //connect to mongodb
 
-mongoose.connect('mongodb://katielynn.ddns.net:27017/sweetlist');
+mongoose.connect('mongodb://katielynn.ddns.net:27017');
 
 //on connection
 
@@ -51,5 +51,6 @@ app.get('/',(req, res)=>{
 
 
 app.listen(PORT, ()=>{
+    
     console.log('Server has been started at port: ' + PORT);
 })
