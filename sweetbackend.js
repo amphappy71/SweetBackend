@@ -13,13 +13,9 @@ var app = express();
 
 var route = require('./route/route');
 
-//use imported route file
-
-app.use('/api', route);
-
 //connect to mongodb
 
-mongoose.connect('mongodb://katielynn.ddns.net:27017');
+mongoose.connect('mongodb://katielynn.ddns.net:27017/sweetts');
 
 //on connection
 
@@ -43,6 +39,9 @@ app.use(cors());
 //add body-parser 
 app.use(bodyparser.json());
 
+//use imported route file
+
+app.use('/api', route);
 
 app.get('/',(req, res)=>{
     res.send('Does this work?');
@@ -53,4 +52,4 @@ app.get('/',(req, res)=>{
 app.listen(PORT, ()=>{
     
     console.log('Server has been started at port: ' + PORT);
-})
+});

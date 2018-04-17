@@ -6,7 +6,7 @@ const WorkerSchema = mongoose.Schema({
         required: true
     },
     zip: {
-        type: String,
+        type: Number,
         required: true
     },
     firstName: {
