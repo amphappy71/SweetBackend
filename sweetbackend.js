@@ -44,11 +44,12 @@ app.use(bodyparser.json());
 app.use('/api', route);
 
 app.get('/',(req, res)=>{
-    res.send('Does this work?');
+    console.log('Root route at: ' + Date()), //req happens here
+    res.send('Does this work?'); //we sent this
 })
 
 
 app.listen(PORT, ()=>{
-    
+    console.log('Time:', Date());
     console.log('Server has been started at port: ' + PORT);
 });
