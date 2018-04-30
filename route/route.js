@@ -254,7 +254,7 @@ function(err, shopper){
 });
 
 router.put('/admin/:id', (req, res, next)=>{
-    Worker.findOneAndUpdate({_id: req.params.id},{
+    Admin.findOneAndUpdate({_id: req.params.id},{
         $set:{
             email: req.body.email,
             password: req.body.password
